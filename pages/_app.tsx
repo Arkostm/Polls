@@ -3,6 +3,8 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
+import { ThemeProvider } from '@material-ui/core';
+import { Theme } from '../styles/theme';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -12,7 +14,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name='description' content='Polls project, all thanks to henry' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Component {...pageProps} />
+      <ThemeProvider theme={Theme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
       <footer className={styles.footer}>
         <div>
           <a
