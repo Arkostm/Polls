@@ -3,6 +3,9 @@
 # package lock
 package-lock.json
 
+# yarn lock
+yarn.json
+
 # dependencies
 /node_modules
 /.pnp
