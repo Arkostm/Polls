@@ -5,6 +5,7 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { ThemeProvider } from '@material-ui/core';
 import { Theme } from '../styles/theme';
+import { Navbar } from '../components/navbar';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -15,6 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <ThemeProvider theme={Theme}>
+        <Navbar></Navbar>
         <Component {...pageProps} />
       </ThemeProvider>
       <footer className={styles.footer}>
