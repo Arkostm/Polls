@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
+import { Navbar } from '../components/navbar';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name='description' content='Polls project, all thanks to henry' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
+      <Navbar></Navbar>
       <Component {...pageProps} />
       <footer className={styles.footer}>
         <div>
