@@ -38,7 +38,6 @@ const Login: NextPage = () => {
                     <Checkbox
                       checked={true}
                       onChange={() => {}}
-                      label={'Keep me logged in'}
                       inputProps={{ 'aria-label': 'primary checkbox' }}
                     />
                   }
