@@ -16,7 +16,7 @@ const Login: NextPage = () => {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <h1 className={styles.title}>Welcome to Login</h1>
+        <h3 className={styles.title}>Login</h3>
         <ThemeProvider theme={Theme}>
           <Paper>
             <Grid
