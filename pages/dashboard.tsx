@@ -1,8 +1,9 @@
 import type { NextPage } from 'next';
-import styles from '../styles/Dashboard.module.css';
 
 import { BarChart } from '../components/BarChart';
 import { PieChart } from '../components/PieChart';
+
+import styles from '../styles/Dashboard.module.css';
 
 const Dashboard: NextPage = () => {
   return (

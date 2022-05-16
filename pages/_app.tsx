@@ -1,16 +1,18 @@
-import '../styles/globals.css';
-import type { AppProps } from 'next/app';
+import React from 'react';
+
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from '../styles/Home.module.css';
 import { ThemeProvider } from '@material-ui/core';
+import type { AppProps } from 'next/app';
+
 import { Theme } from '../theme';
 import { Navbar } from '../components/NavBar';
 import { AppContextProvider } from '../components/Context';
 
-import React from 'react';
+import '../styles/globals.css';
+import styles from '../styles/Home.module.css';
 
-function MyApp({ Component, pageProps }: AppProps) {
+export default function Polls({ Component, pageProps }: AppProps) {
   return (
     <AppContextProvider>
       <Head>
@@ -41,5 +43,3 @@ function MyApp({ Component, pageProps }: AppProps) {
     </AppContextProvider>
   );
 }
-
-export default MyApp;

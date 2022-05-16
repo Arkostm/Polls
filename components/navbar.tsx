@@ -21,7 +21,7 @@ export const Navbar = () => {
         )}
         {log && (
           <div className={styles.links}>
-            <Link href={'/'}>Logout</Link>
+            <Link href={'/logout'}>Logout</Link>
           </div>
         )}
       </Toolbar>

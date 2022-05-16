@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
-import styles from '../styles/Login.module.css';
-
+import { useRouter } from 'next/router';
+import { FormEvent, useState } from 'react';
 import {
   Checkbox,
   Grid,
@@ -9,16 +9,18 @@ import {
   Paper,
   Button,
 } from '@material-ui/core';
-import { useState } from 'react';
-import { useRouter } from 'next/router';
+
 import { useAppContext } from '../components/Context';
+
+import styles from '../styles/Login.module.css';
 
 const Login: NextPage = () => {
   const [check, setCheck] = useState<boolean>(true);
   const { setLog } = useAppContext();
   const router = useRouter();
 
-  const handleSubmit = () => {
+  const handleSubmit = (event: FormEvent) => {
+    event.preventDefault();
     setLog(true);
     router.push('/dashboard');
   };
@@ -27,7 +29,7 @@ const Login: NextPage = () => {
     <div className={styles.container}>
       <main className={styles.main}>
         <h3 className={styles.title}>Login</h3>
-        <form onSubmit={() => handleSubmit()} method={'POST'}>
+        <form onSubmit={handleSubmit} method={'POST'}>
           <Paper>
             <Grid
               container
