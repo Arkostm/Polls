@@ -8,7 +8,13 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to{' '}
-          <a href='https://github.com/Arkostm/Polls'>Henry's Polls!</a>
+          <a
+            href='https://github.com/Arkostm/Polls'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Henry's Polls!
+          </a>
         </h1>
       </main>
     </div>

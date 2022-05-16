@@ -28,7 +28,7 @@ const Login: NextPage = () => {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <h3 className={styles.title}>Login</h3>
+        <h2 className={styles.title}>Login</h2>
         <form onSubmit={handleSubmit} method={'POST'}>
           <Paper>
             <Grid
