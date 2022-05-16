@@ -4,8 +4,20 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { ThemeProvider } from '@material-ui/core';
-import { Theme } from '../styles/theme';
+import { Theme } from '../theme';
 import { Navbar } from '../components/navbar';
+
+import React from 'react';
+import { useContext } from 'react';
+
+const AuthContext = React.createContext({
+  log: false,
+  setLog: function (v: boolean) {
+    this.log = v;
+  },
+});
+
+export const context = () => useContext(AuthContext);
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

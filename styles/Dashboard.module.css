@@ -1,0 +1,13 @@
+.charts {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 100%;
+}
+
+.chart {
+  width: 30%;
+  height: 30%;
+}

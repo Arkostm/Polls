@@ -1,0 +1,25 @@
+import type { NextPage } from 'next';
+import styles from '../styles/Dashboard.module.css';
+
+import { BarChart } from '../components/BarChart';
+import { PieChart } from '../components/PieChart';
+
+const Dashboard: NextPage = () => {
+  return (
+    <div className={styles.container}>
+      <main className={styles.main}>
+        <h3 className={styles.title}>Dashboard</h3>
+        <div className={styles.charts}>
+          <div className={styles.chart}>
+            <BarChart></BarChart>
+          </div>
+          <div className={styles.chart}>
+            <PieChart></PieChart>
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+};
+
+export default Dashboard;
