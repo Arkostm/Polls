@@ -13,7 +13,7 @@ const Home: NextPage = () => {
             target='_blank'
             rel='noopener noreferrer'
           >
-            Henry's Polls!
+            Henry&apos;s Polls!
           </a>
         </h1>
       </main>

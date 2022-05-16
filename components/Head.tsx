@@ -4,7 +4,7 @@ import NextHead from 'next/head';
 export const Head = () => {
   return (
     <NextHead>
-      <title>Henry's Polls</title>
+      <title>Henry&apos;s Polls</title>
       <meta name='description' content='Polls project, all thanks to henry' />
       <link rel='icon' href='/favicon.ico' />
     </NextHead>
