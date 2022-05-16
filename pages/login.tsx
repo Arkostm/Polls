@@ -11,23 +11,23 @@ import {
 } from '@material-ui/core';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-import { context } from '../pages/_app';
+import { useAppContext } from '../components/Context';
 
 const Login: NextPage = () => {
   const [check, setCheck] = useState<boolean>(true);
+  const { setLog } = useAppContext();
   const router = useRouter();
 
   const handleSubmit = () => {
-    router.push('/dashboard');
-    const { setLog } = context();
     setLog(true);
+    router.push('/dashboard');
   };
 
   return (
     <div className={styles.container}>
       <main className={styles.main}>
         <h3 className={styles.title}>Login</h3>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={() => handleSubmit()} method={'POST'}>
           <Paper>
             <Grid
               container

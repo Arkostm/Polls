@@ -4,10 +4,10 @@ import Link from 'next/link';
 
 import styles from './styles/navbar-styles.module.css';
 
-import { context } from '../pages/_app';
+import { useAppContext } from './Context';
 
 export const Navbar = () => {
-  const { log } = context();
+  const { log } = useAppContext();
   return (
     <AppBar position='static'>
       <CssBaseline />

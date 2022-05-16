@@ -5,23 +5,14 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { ThemeProvider } from '@material-ui/core';
 import { Theme } from '../theme';
-import { Navbar } from '../components/navbar';
+import { Navbar } from '../components/NavBar';
+import { AppContextProvider } from '../components/Context';
 
 import React from 'react';
-import { useContext } from 'react';
-
-const AuthContext = React.createContext({
-  log: false,
-  setLog: function (v: boolean) {
-    this.log = v;
-  },
-});
-
-export const context = () => useContext(AuthContext);
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <AppContextProvider>
       <Head>
         <title>Henry's Polls</title>
         <meta name='description' content='Polls project, all thanks to henry' />
@@ -47,7 +38,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           </span>
         </div>
       </footer>
-    </>
+    </AppContextProvider>
   );
 }
 
