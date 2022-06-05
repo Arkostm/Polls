@@ -19,10 +19,19 @@ const Login: NextPage = () => {
   const { setLog } = useAppContext();
   const router = useRouter();
 
-  const handleSubmit = (event: FormEvent) => {
+  const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
-    setLog(true);
-    router.push('/dashboard');
+    const response = await fetch('/api/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        username: 'hi',
+      }),
+    });
+    if (response.ok) {
+      setLog(true);
+      router.push('/dashboard');
+    }
   };
 
   return (

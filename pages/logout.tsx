@@ -9,8 +9,16 @@ const Logout: NextPage = () => {
   const router = useRouter();
 
   useEffect(() => {
-    setLog(false);
-    router.push('/');
+    (async () => {
+      const response = await fetch('/api/logout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+      });
+      if (response.ok) {
+        setLog(false);
+        router.push('/');
+      }
+    })();
   }, [router, setLog]);
 
   return <></>;
