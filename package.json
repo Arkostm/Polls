@@ -9,8 +9,10 @@
     "lint": "next lint",
     "test:open": "cypress open",
     "test:run": "cypress run",
-    "test:e2e": "start-server-and-test start http://localhost:3000 cypress",
-    "test:e2e:headless": "start-server-and-test start http://localhost:3000 cypress:headless"
+    "test:headless": "cypress run --headless",
+    "test:e2e:open": "yarn build && start-server-and-test start 3000 test:open",
+    "test:e2e:run": "yarn build && start-server-and-test start 3000 test:run",
+    "test:e2e:headless": "yarn build && start-server-and-test start 3000 test:headless"
   },
   "dependencies": {
     "@material-ui/core": "^4.12.4",
@@ -33,6 +35,6 @@
     "eslint": "8.15.0",
     "eslint-config-next": "12.1.6",
     "start-server-and-test": "^1.14.0",
-    "typescript": "4.6.4"
+    "typescript": "^4.7.3"
   }
 }

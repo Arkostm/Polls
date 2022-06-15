@@ -1,15 +1,14 @@
-describe('Navigation', () => {
-  it('should navigate to the about page', () => {
-    // Start from the index page
-    cy.visit('http://localhost:3000/');
+describe('Open Application', () => {
+  it('should navigate to the home page', () => {
+    // Start from the home page
+    // Cypress.config().baseUrl;
+    cy.visit('/');
 
-    // Find a link with an href attribute containing "about" and click it
-    cy.get('a[href*="about"]').click();
+    // Get if exists Home and Login links
+    cy.get('a[href*="/"]:contains("Home")');
+    cy.get('a[href*="/login"]:contains("Login")');
 
-    // The new url should include "/about"
-    cy.url().should('include', '/about');
-
-    // The new page should contain an h1 with "About page"
-    cy.get('h1').contains('About Page');
+    // Get if exists title with the project's name
+    cy.get('h4').contains('Henry´s Polls');
   });
 });
