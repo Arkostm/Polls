@@ -14,5 +14,6 @@ export const PUBLIC_ROUTES: Array<Route> = [
 export const PRIVATE_ROUTES: Array<Route> = [
   { path: '/dashboard', name: 'Dashboard' },
   { path: '/users', name: 'Users' },
+  { path: '/voting', name: 'Vote' },
   { path: '/logout', name: 'Logout' },
 ];
