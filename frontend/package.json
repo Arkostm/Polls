@@ -10,9 +10,9 @@
     "test:open": "cypress open",
     "test:run": "cypress run",
     "test:headless": "cypress run --headless",
-    "test:e2e:open": "yarn build && start-server-and-test start 3000 test:open",
-    "test:e2e:run": "yarn build && start-server-and-test start 3000 test:run",
-    "test:e2e:headless": "yarn build && start-server-and-test start 3000 test:headless"
+    "test:e2e:open": "start-server-and-test dev 3000 test:open",
+    "test:e2e:run": "start-server-and-test dev 3000 test:run",
+    "test:e2e:headless": "start-server-and-test dev 3000 test:headless"
   },
   "dependencies": {
     "@material-ui/core": "^4.12.4",
