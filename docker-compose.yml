@@ -1,0 +1,16 @@
+version: '3'
+services:
+  postgresql:
+    image: postgres:latest
+    volumes:
+      - polls:/var/lib/postgresql/data
+      - ./dump.sql:/docker-entrypoint-initdb.d/create_tables.sql
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=polls
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+volumes:
+  polls:
+    external: false
